@@ -247,24 +247,12 @@
 
   /* ─── HERO ─── */
   .hero {
-    background: linear-gradient(to right, rgba(13,43,85,0.97) 38%, rgba(13,43,85,0.55) 100%), url("hero-home.png") center/cover no-repeat;
+    background: linear-gradient(to right, rgba(13,43,85,0.88) 35%, rgba(13,43,85,0.45) 100%), url("hero-home.png") center/cover no-repeat;
     padding: 88px 48px 96px;
     position: relative; overflow: hidden;
   }
-  .hero::before {
-    content: '';
-    position: absolute; top: -80px; right: -100px;
-    width: 560px; height: 560px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(232,160,32,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero::after {
-    content: '';
-    position: absolute; bottom: -120px; left: 25%;
-    width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(29,158,117,0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
+  
+  
   .hero-inner { max-width: 720px; position: relative; z-index: 1; }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
@@ -633,7 +621,11 @@
     .nav-links li a.nav-cta { margin: 8px 24px 0; border-radius: 8px; text-align: center; }
     .nav-toggle { display: flex; }
 
-    .hero { padding: 56px 24px 64px; }
+    .hero {
+    background: linear-gradient(to right, rgba(13,43,85,0.88) 35%, rgba(13,43,85,0.45) 100%), url("hero-home.png") center/cover no-repeat;
+    padding: 88px 48px 96px;
+    position: relative; overflow: hidden;
+  }
     .hero h1 { font-size: 36px; }
     .hero p { font-size: 16px; }
 
