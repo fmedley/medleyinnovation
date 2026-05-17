@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner With Us | Medley Innovation Financial Empowerment</title>
+  <meta name="description" content="Partner with Medley Innovation to deliver WIOA-aligned financial empowerment programs to your participants. Serving workforce boards, nonprofits, employers, and government agencies." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D2B55;
+    --navy-dark: #081A36;
+    --navy-mid: #163869;
+    --gold: #E8A020;
+    --gold-light: #F5C060;
+    --teal: #1D9E75;
+    --white: #FFFFFF;
+    --off-white: #F7F6F2;
+    --gray-light: #E8E5DE;
+    --gray-text: #555;
+    --body-text: #2A2826;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Poppins', 'Segoe UI', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); font-size: 16px; line-height: 1.7; color: var(--body-text); background: var(--off-white); }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: sticky; top: 0; z-index: 1000;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 80px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  }
+  .nav-logo { display: flex; flex-direction: column; line-height: 1; }
+  .nav-logo .name { font-family: var(--serif); font-size: 42px; font-weight: 700; color: var(--gold); }
+  .nav-logo .tagline { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.5); letter-spacing: 3px; text-transform: uppercase; margin-top: 2px; }
+  .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+  .nav-links li a { display: block; font-size: 13.5px; font-weight: 400; color: rgba(255,255,255,0.75); padding: 8px 16px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+  .nav-links li a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+  .nav-links li a.active { color: #fff; font-weight: 600; }
+  .nav-links li a.nav-cta { background: var(--gold); color: var(--navy); font-weight: 600; margin-left: 10px; padding: 9px 22px; }
+  .nav-links li a.nav-cta:hover { background: var(--gold-light); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; }
+
+  /* ─── PAGE HERO ─── */
+  .page-hero {
+    background: var(--navy);
+    padding: 72px 48px 80px;
+    text-align: center;
+  }
+  .page-hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(232,160,32,0.15); border: 1px solid rgba(232,160,32,0.35);
+    color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 7px 18px; border-radius: 24px; margin-bottom: 24px;
+  }
+  .page-hero h1 { font-family: var(--serif); font-size: 52px; font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 20px; }
+  .page-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 640px; margin: 0 auto; }
+
+  /* ─── SECTIONS ─── */
+  .section { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .section-title { font-family: var(--serif); font-size: 38px; font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; }
+  .section-sub { font-size: 17px; color: var(--gray-text); max-width: 600px; margin-bottom: 48px; }
+
+  /* ─── WHO WE PARTNER WITH ─── */
+  .partner-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .partner-card {
+    background: var(--white); border-radius: 16px;
+    padding: 36px 28px; text-align: center;
+    border: 1.5px solid var(--gray-light);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .partner-card:hover { box-shadow: 0 8px 32px rgba(13,43,85,0.12); transform: translateY(-4px); }
+  .partner-icon {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: rgba(13,43,85,0.07);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; font-size: 28px;
+  }
+  .partner-card h3 { font-family: var(--serif); font-size: 20px; color: var(--navy); margin-bottom: 10px; }
+  .partner-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+
+  /* ─── WHAT YOU GET ─── */
+  .benefits-bg { background: var(--navy); padding: 80px 48px; }
+  .benefits-inner { max-width: 1200px; margin: 0 auto; }
+  .benefits-bg .section-label { color: var(--gold); }
+  .benefits-bg .section-title { color: var(--white); margin-bottom: 48px; }
+  .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .benefit-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px; padding: 32px 28px;
+  }
+  .benefit-num { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .benefit-card h3 { font-family: var(--serif); font-size: 22px; color: var(--white); margin-bottom: 10px; }
+  .benefit-card p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+  /* ─── FUNDING ALIGNMENT ─── */
+  .funding-section { background: var(--white); }
+  .funding-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .funding-row {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--off-white); border-radius: 12px;
+    padding: 20px 24px; border-left: 4px solid var(--gold);
+  }
+  .funding-check { font-size: 20px; margin-top: 2px; flex-shrink: 0; }
+  .funding-row h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .funding-row p { font-size: 13px; color: var(--gray-text); line-height: 1.5; }
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--navy); color: var(--white);
+    font-size: 14px; font-weight: 600; padding: 14px 28px;
+    border-radius: 8px; margin-top: 40px;
+    transition: background 0.2s;
+  }
+  .download-btn:hover { background: var(--navy-mid); }
+
+  /* ─── PROPOSAL FORM ─── */
+  .form-section { background: var(--off-white); padding: 80px 48px; }
+  .form-inner { max-width: 800px; margin: 0 auto; }
+  .form-card { background: var(--white); border-radius: 20px; padding: 56px; box-shadow: 0 4px 32px rgba(13,43,85,0.08); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 0.3px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1.5px solid var(--gray-light); border-radius: 8px;
+    padding: 12px 16px; font-family: var(--sans); font-size: 14px;
+    color: var(--body-text); background: var(--off-white);
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { outline: none; border-color: var(--navy); background: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%; background: var(--gold); color: var(--navy);
+    font-family: var(--sans); font-size: 16px; font-weight: 700;
+    padding: 16px; border: none; border-radius: 10px;
+    cursor: pointer; margin-top: 8px;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .form-note { font-size: 13px; color: var(--gray-text); text-align: center; margin-top: 12px; }
+
+  /* ─── CTA STRIP ─── */
+  .cta-strip { background: var(--gold); padding: 64px 48px; text-align: center; }
+  .cta-strip h2 { font-family: var(--serif); font-size: 36px; color: var(--navy); margin-bottom: 12px; }
+  .cta-strip p { font-size: 17px; color: rgba(13,43,85,0.75); margin-bottom: 32px; }
+  .cta-btn {
+    display: inline-block; background: var(--navy); color: var(--white);
+    font-size: 15px; font-weight: 600; padding: 15px 36px; border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .cta-btn:hover { background: var(--navy-dark); }
+
+  /* ─── FOOTER ─── */
+  .footer { background: var(--navy-dark); padding: 64px 48px 32px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand .name { color: var(--gold); font-family: var(--serif); font-size: 20px; font-weight: 700; }
+  .footer-brand .tagline { color: rgba(255,255,255,0.35); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; margin-top: 3px; }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; margin-top: 16px; }
+  .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 8px; transition: color 0.2s; }
+  .footer-col a:hover { color: rgba(255,255,255,0.9); }
+  .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+  .footer-social a { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); transition: background 0.2s; }
+  .footer-social a:hover { background: rgba(255,255,255,0.18); }
+  .footer-social svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.7); }
+  .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.28); }
+  .footer-bottom a { color: rgba(255,255,255,0.45); }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 820px) {
+    .nav { padding: 0 24px; }
+    .nav-logo .name { font-size: 26px; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: var(--navy); padding: 16px 24px 24px; gap: 4px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .page-hero { padding: 56px 24px 64px; }
+    .page-hero h1 { font-size: 34px; }
+    .section { padding: 56px 24px; }
+    .partner-grid { grid-template-columns: 1fr 1fr; }
+    .benefits-bg { padding: 56px 24px; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .funding-grid { grid-template-columns: 1fr; }
+    .form-section { padding: 56px 24px; }
+    .form-card { padding: 32px 24px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer { padding: 48px 24px 24px; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  }
+  @media (max-width: 520px) {
+    .partner-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: 28px; }
+    .section-title { font-size: 28px; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav" id="main-nav">
+  <a href="/index.html" class="nav-logo">
+    <span class="name">Medley Innovation</span>
+    <span class="tagline">Financial Empowerment</span>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html#programs">Programs</a></li>
+    <li><a href="/workforce-readiness.html">Workforce</a></li>
+    <li><a href="/career-readiness.html">Career</a></li>
+    <li><a href="/entrepreneurship.html">Business</a></li>
+    <li><a href="/youth-financial-literacy.html">Youth</a></li>
+    <li><a href="/reentry-empowerment.html">Re-Entry</a></li>
+    <li><a href="/index.html#mission">About</a></li>
+    <li><a href="/index.html#funding">Funding &amp; Partners</a></li>
+    <li><a href="/partner-with-us.html" class="active nav-cta">Partner With Us</a></li>
+  </ul>
+</nav>
+
+<!-- ─── PAGE HERO ─── -->
+<section class="page-hero">
+  <div class="eyebrow">&#9670; Strategic Partnerships</div>
+  <h1>Let's Build Economic Mobility Together</h1>
+  <p>Medley Innovation delivers WIOA-aligned financial capability programs that help your participants get hired, stay employed, and achieve lasting economic independence.</p>
+</section>
+
+<!-- ─── WHO WE PARTNER WITH ─── -->
+<section class="section">
+  <div class="section-label">&#9670; Who We Serve</div>
+  <h2 class="section-title">Built for Organizations Like Yours</h2>
+  <p class="section-sub">We work with the institutions that are already doing the hard work — and we make your financial empowerment component stronger.</p>
+  <div class="partner-grid">
+    <div class="partner-card">
+      <div class="partner-icon">🏛️</div>
+      <h3>Workforce Boards</h3>
+      <p>WIOA Title I & II aligned curriculum delivered across your American Job Centers and partner sites. Seamless reporting integration.</p>
+    </div>
+    <div class="partner-card">
+      <div class="partner-icon">🤝</div>
+      <h3>Nonprofits & CBOs</h3>
+      <p>Financial empowerment programming for your participants — CSBG, Second Chance Act, HUD, and foundation-funded programs welcome.</p>
+    </div>
+    <div class="partner-card">
+      <div class="partner-icon">🏦</div>
+      <h3>Banks & Employers</h3>
+      <p>CRA-qualifying financial education for your community. Workforce financial readiness training for employees and job seekers.</p>
+    </div>
+    <div class="partner-card">
+      <div class="partner-icon">🏢</div>
+      <h3>Government Agencies</h3>
+      <p>DOL, DOJ, HUD, and SBA-aligned programming for corrections, housing, and workforce development agencies at every level.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT YOU GET ─── -->
+<div class="benefits-bg">
+  <div class="benefits-inner">
+    <div class="section-label">&#9670; What You Get</div>
+    <h2 class="section-title" style="color:#fff;">Everything You Need. Nothing You Don't.</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">01</div>
+        <h3>Proven Curriculum</h3>
+        <p>Budgeting, credit building, banking access, debt management, savings, consumer protection, entrepreneurship, and digital banking — all modular and customizable to your population.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">02</div>
+        <h3>Expert Facilitators</h3>
+        <p>Trained, community-connected facilitators who deliver engaging in-person and virtual sessions — bilingual capability available for Spanish-speaking populations.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">03</div>
+        <h3>Outcomes & Reporting</h3>
+        <p>Pre/post assessments, attendance tracking, outcome reporting aligned to WIOA and funder requirements. We make your grant reporting easier, not harder.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">04</div>
+        <h3>Flexible Delivery</h3>
+        <p>In-person workshops, virtual cohorts, hybrid delivery, one-on-one coaching, employer site delivery, or community-based programming — we meet your participants where they are.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">05</div>
+        <h3>Youth Programs</h3>
+        <p>Ages 14–24 financial literacy programs aligned with school district partnerships and youth workforce development grants. Engaging, interactive, and age-appropriate.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">06</div>
+        <h3>Re-Entry Specialized</h3>
+        <p>Purpose-built financial empowerment for returning citizens — banking access, ID acquisition, credit rebuilding, and workforce re-integration financial coaching.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FUNDING ALIGNMENT ─── -->
+<section class="section funding-section" style="max-width:100%; padding: 80px 48px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="section-label">&#9670; Funding Alignment</div>
+    <h2 class="section-title">Your Grant Already Covers This</h2>
+    <p class="section-sub">Medley Innovation programs are designed to align with the funding streams your organization already receives. No new budget required.</p>
+    <div class="funding-grid">
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>WIOA Title I (DOL)</h4>
+          <p>Workforce Readiness, Career Readiness, Youth Programs — aligned with Adult, Dislocated Worker, and Youth activities</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>WIOA Title II (Dept. of Education)</h4>
+          <p>Adult Education & Financial Literacy — integrated financial capability within adult education programming</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>CSBG (HHS)</h4>
+          <p>Community Wellness, Economic Self-Sufficiency — aligns with Community Action Agency self-sufficiency goals</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>Second Chance Act / REO (DOJ/DOL)</h4>
+          <p>Re-Entry Financial Empowerment — banking access, credit rebuilding, workforce reintegration financial coaching</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>HUD Housing Counseling</h4>
+          <p>Digital Banking, Consumer Protection — pre-purchase financial education, renter financial literacy</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>SBA Community Navigator</h4>
+          <p>Entrepreneurship & Small Business Financial Education — access to capital, business planning, financial management</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>CRA (Community Reinvestment Act)</h4>
+          <p>All programs qualify as CRA-eligible community development activities for banks with Nevada presence</p>
+        </div>
+      </div>
+      <div class="funding-row">
+        <div class="funding-check">✅</div>
+        <div>
+          <h4>School District & Youth Grants</h4>
+          <p>Youth Financial Literacy — aligned with school district workforce grants and youth financial education mandates</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="download-btn" onclick="alert('Funding Alignment One-Pager coming soon! Contact us at support@MedleyInnovation.com'); return false;">
+      ⬇ &nbsp;Download Funding Alignment One-Pager
+    </a>
+  </div>
+</section>
+
+<!-- ─── REQUEST A PROPOSAL FORM ─── -->
+<div class="form-section" id="request-proposal">
+  <div class="form-inner">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="section-label" style="justify-content:center; display:flex;">&#9670; Request a Proposal</div>
+      <h2 class="section-title" style="margin-bottom:12px;">Let's Build Something Together</h2>
+      <p style="color:var(--gray-text); font-size:16px;">Tell us about your organization and we'll put together a custom program proposal — typically within 3 business days.</p>
+    </div>
+    <div class="form-card">
+      <form id="proposal-form" action="https://formspree.io/f/support@MedleyInnovation.com" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="org-name">Organization Name *</label>
+            <input type="text" id="org-name" name="organization" placeholder="e.g. Workforce Connections" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-name">Your Name *</label>
+            <input type="text" id="contact-name" name="contact_name" placeholder="First and Last Name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@organization.org" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="(702) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="org-type">Organization Type *</label>
+            <select id="org-type" name="org_type" required>
+              <option value="" disabled selected>Select your org type</option>
+              <option>Workforce Development Board</option>
+              <option>Nonprofit / Community Org</option>
+              <option>Bank / Credit Union</option>
+              <option>Employer / Corporation</option>
+              <option>Government Agency</option>
+              <option>School District</option>
+              <option>Corrections / Re-Entry Program</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="program">Program(s) Interested In *</label>
+            <select id="program" name="program" required>
+              <option value="" disabled selected>Select a program</option>
+              <option>Workforce Financial Readiness</option>
+              <option>Career Readiness</option>
+              <option>Re-Entry Financial Empowerment</option>
+              <option>Youth Financial Literacy</option>
+              <option>Community Financial Wellness</option>
+              <option>Entrepreneurship & Small Business</option>
+              <option>Digital Banking & Consumer Protection</option>
+              <option>Multiple Programs / Custom Package</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="participants">Estimated # of Participants *</label>
+            <select id="participants" name="participants" required>
+              <option value="" disabled selected>Select a range</option>
+              <option>Under 25</option>
+              <option>25–50</option>
+              <option>50–100</option>
+              <option>100–250</option>
+              <option>250–500</option>
+              <option>500+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="funding">Funding Source</label>
+            <select id="funding" name="funding_source">
+              <option value="" disabled selected>How is this funded?</option>
+              <option>WIOA Title I</option>
+              <option>WIOA Title II</option>
+              <option>CSBG</option>
+              <option>CRA / Bank Partnership</option>
+              <option>Second Chance Act / REO</option>
+              <option>HUD</option>
+              <option>SBA</option>
+              <option>Foundation / Private Grant</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="timeline">Preferred Start Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="" disabled selected>When do you need this?</option>
+              <option>ASAP (within 30 days)</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>6–12 months</option>
+              <option>Planning for next fiscal year</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="delivery">Preferred Delivery Format</label>
+            <select id="delivery" name="delivery">
+              <option value="" disabled selected>Select format</option>
+              <option>In-Person</option>
+              <option>Virtual / Online</option>
+              <option>Hybrid</option>
+              <option>Flexible / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" placeholder="Tell us more about your population, specific needs, grant requirements, or any other details that would help us build the right proposal for you..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Request My Program Proposal →</button>
+        <p class="form-note">We typically respond within 3 business days. For urgent requests, email <a href="mailto:support@MedleyInnovation.com" style="color:var(--navy); font-weight:600;">support@MedleyInnovation.com</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CTA ─── -->
+<div class="cta-strip">
+  <h2>Not Ready for a Full Proposal?</h2>
+  <p>Start with a 15-minute conversation. No commitment, no pressure — just a conversation about your needs.</p>
+  <a href="mailto:support@MedleyInnovation.com" class="cta-btn">Schedule a Call →</a>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <span class="name">Medley Innovation</span>
+        <span class="tagline">Financial Empowerment</span>
+      </div>
+      <p>Workforce-aligned financial education and economic empowerment programs — serving underserved communities nationwide through virtual and in-person delivery. Headquartered in Southern Nevada.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/medley-innovation" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/medleyinnovation" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <a href="/workforce-readiness.html">Workforce Readiness</a>
+      <a href="/career-readiness.html">Career Readiness</a>
+      <a href="/entrepreneurship.html">Entrepreneurship</a>
+      <a href="/youth-financial-literacy.html">Youth Programs</a>
+      <a href="/reentry-empowerment.html">Re-Entry Support</a>
+      <a href="/community-wellness.html">Community Wellness</a>
+      <a href="/digital-banking.html">Digital Banking</a>
+    </div>
+    <div class="footer-col">
+      <h4>Partners</h4>
+      <a href="/partner-with-us.html">Partner With Us</a>
+      <a href="/partner-with-us.html#request-proposal">Request a Proposal</a>
+      <a href="/index.html#funding">Funding Alignment</a>
+      <a href="/index.html#funding">Workforce Agencies</a>
+      <a href="/index.html#funding">Banks &amp; CDFIs</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#mission">About Us</a>
+      <a href="/index.html#contact">Contact</a>
+      <a href="mailto:support@MedleyInnovation.com">support@MedleyInnovation.com</a>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="footer-bottom">
+    <p>&copy; 2025 Medley Innovation. All rights reserved.</p>
+    <p><a href="mailto:support@MedleyInnovation.com">support@MedleyInnovation.com</a></p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
