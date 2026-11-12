@@ -120,7 +120,7 @@
   .fund-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
   .fund-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 22px 18px; transition: background 0.2s; }
   .fund-card:hover { background: rgba(255,255,255,0.14); }
-  .fund-card h4 { font-size: 13.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+  .fund-card h3 { font-size: 13.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
   .fund-card p { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.6; }
 
   /* CTA */
@@ -322,23 +322,23 @@
     <div class="fund-grid">
       
       <div class="fund-card">
-        <h4>SBA Community Navigator</h4>
+        <h3>SBA Community Navigator</h3>
         <p>Aligned with SBA's Community Navigator and Small Business Development Center ecosystems.</p>
       </div>
       <div class="fund-card">
-        <h4>CDFI Fund Programs</h4>
+        <h3>CDFI Fund Programs</h3>
         <p>Community Development Financial Institution funding for underserved entrepreneur education.</p>
       </div>
       <div class="fund-card">
-        <h4>Minority Business Programs</h4>
+        <h3>Minority Business Programs</h3>
         <p>State and federal programs supporting minority, women, and veteran-owned business development.</p>
       </div>
       <div class="fund-card">
-        <h4>Economic Development Grants</h4>
+        <h3>Economic Development Grants</h3>
         <p>Local and regional economic development funding for entrepreneurship training.</p>
       </div>
       <div class="fund-card">
-        <h4>CRA Bank Partnerships</h4>
+        <h3>CRA Bank Partnerships</h3>
         <p>Banks and credit unions funding small business financial literacy in underserved communities.</p>
       </div>
     </div>
@@ -398,7 +398,7 @@
   </div>
   <hr class="footer-divider" />
   <div class="footer-bottom">
-    <p>&copy; 2025 Medley Innovation. All rights reserved.</p>
+    <p>&copy; <span id="copyright-year">2026</span> Medley Innovation. All rights reserved.</p>
     <p><a href="mailto:support@MedleyInnovation.com" style="color:rgba(255,255,255,0.45)">support@MedleyInnovation.com</a></p>
   </div>
 </footer>
@@ -409,5 +409,6 @@
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 </script>
+<script>var _cy=document.getElementById("copyright-year");if(_cy)_cy.textContent=new Date().getFullYear();</script>
 </body>
 </html>

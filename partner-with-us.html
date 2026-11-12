@@ -231,6 +231,8 @@
     <li><a href="/entrepreneurship.html">Business</a></li>
     <li><a href="/youth-financial-literacy.html">Youth</a></li>
     <li><a href="/reentry-empowerment.html">Re-Entry</a></li>
+    <li><a href="/community-wellness.html">Community</a></li>
+    <li><a href="/digital-banking.html">Banking</a></li>
     <li><a href="/index.html#mission">About</a></li>
     <li><a href="/index.html#funding">Funding &amp; Partners</a></li>
     <li><a href="/partner-with-us.html" class="active nav-cta">Partner With Us</a></li>
@@ -550,7 +552,7 @@
   </div>
   <hr class="footer-divider" />
   <div class="footer-bottom">
-    <p>&copy; 2025 Medley Innovation. All rights reserved.</p>
+    <p>&copy; <span id="copyright-year">2026</span> Medley Innovation. All rights reserved.</p>
     <p><a href="mailto:support@MedleyInnovation.com">support@MedleyInnovation.com</a></p>
   </div>
 </footer>
@@ -560,5 +562,6 @@
   const links = document.getElementById('nav-links');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
 </script>
+<script>var _cy=document.getElementById("copyright-year");if(_cy)_cy.textContent=new Date().getFullYear();</script>
 </body>
 </html>

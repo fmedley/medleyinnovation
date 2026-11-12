@@ -120,7 +120,7 @@
   .fund-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
   .fund-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 22px 18px; transition: background 0.2s; }
   .fund-card:hover { background: rgba(255,255,255,0.14); }
-  .fund-card h4 { font-size: 13.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+  .fund-card h3 { font-size: 13.5px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
   .fund-card p { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.6; }
 
   /* CTA */
@@ -322,23 +322,23 @@
     <div class="fund-grid">
       
       <div class="fund-card">
-        <h4>Youth Workforce Grants</h4>
+        <h3>Youth Workforce Grants</h3>
         <p>WIOA Youth Title I funding for participants ages 14–24 in workforce development programs.</p>
       </div>
       <div class="fund-card">
-        <h4>School District Grants</h4>
+        <h3>School District Grants</h3>
         <p>Partnerships with school districts to deliver in-school or after-school financial literacy programs.</p>
       </div>
       <div class="fund-card">
-        <h4>Nonprofit Foundations</h4>
+        <h3>Nonprofit Foundations</h3>
         <p>Private foundation funding for youth education and economic empowerment initiatives.</p>
       </div>
       <div class="fund-card">
-        <h4>Community Impact Funds</h4>
+        <h3>Community Impact Funds</h3>
         <p>Local community foundation grants for youth financial literacy in underserved communities.</p>
       </div>
       <div class="fund-card">
-        <h4>CRA Bank Partnerships</h4>
+        <h3>CRA Bank Partnerships</h3>
         <p>Financial institutions funding youth financial education to fulfill Community Reinvestment Act obligations.</p>
       </div>
     </div>
@@ -398,7 +398,7 @@
   </div>
   <hr class="footer-divider" />
   <div class="footer-bottom">
-    <p>&copy; 2025 Medley Innovation. All rights reserved.</p>
+    <p>&copy; <span id="copyright-year">2026</span> Medley Innovation. All rights reserved.</p>
     <p><a href="mailto:support@MedleyInnovation.com" style="color:rgba(255,255,255,0.45)">support@MedleyInnovation.com</a></p>
   </div>
 </footer>
@@ -409,5 +409,6 @@
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 </script>
+<script>var _cy=document.getElementById("copyright-year");if(_cy)_cy.textContent=new Date().getFullYear();</script>
 </body>
 </html>
