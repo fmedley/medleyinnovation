@@ -1,0 +1,23 @@
+# Medley Innovation
+
+> Medley Innovation is a Las Vegas, Nevada-based provider of WIOA-aligned financial literacy and workforce development programs, specializing in community financial wellness for families, job seekers, youth, entrepreneurs, and underserved communities. Programs are delivered in person across Southern Nevada and virtually nationwide via Zoom, and are grant-eligible (WIOA, CDFI Fund, HUD, CRA, SBA, CSBG).
+
+## Programs
+- [Community Financial Wellness](https://www.medleyinnovation.com/community-wellness.html): Family financial literacy, homeownership readiness, credit building, and fraud prevention.
+- [Workforce Financial Readiness](https://www.medleyinnovation.com/workforce-readiness.html): Banking, budgeting, credit, and payroll literacy for job seekers.
+- [Career & Employment Readiness](https://www.medleyinnovation.com/career-readiness.html): Resume development, interview prep, workplace professionalism, and job retention.
+- [Entrepreneurship Financial Education](https://www.medleyinnovation.com/entrepreneurship.html): Startup financial planning, business credit, and access to capital.
+- [Youth Financial Literacy](https://www.medleyinnovation.com/youth-financial-literacy.html): Teen financial bootcamps, first-job readiness, and student banking education.
+- [Re-Entry & Justice-Impacted Financial Empowerment](https://www.medleyinnovation.com/reentry-empowerment.html): Banking access, credit rebuilding, and workforce reintegration after incarceration.
+- [Digital Banking Education](https://www.medleyinnovation.com/digital-banking.html): Online and mobile banking, digital payments, and fraud prevention.
+
+## Key facts
+- Location: Las Vegas, Nevada (in person across Southern Nevada; nationwide via Zoom)
+- Funding: WIOA-aligned and grant-eligible (CDFI Fund, HUD, CRA, SBA, CSBG)
+- Audiences: workforce agencies, employers, nonprofits, CDFIs, banks, and underserved communities
+- Contact: support@medleyinnovation.com
+
+## More
+- [Partner With Us](https://www.medleyinnovation.com/partner-with-us.html)
+- [Website](https://www.medleyinnovation.com/)
+- [LinkedIn](https://www.linkedin.com/company/medley-innovation/)
