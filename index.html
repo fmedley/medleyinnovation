@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!-- ─── PRIMARY SEO TAGS ─── -->
 <title>WIOA Financial Literacy Programs | Medley Innovation</title>
@@ -249,7 +252,7 @@
 
   /* ─── HERO ─── */
   .hero {
-    background: linear-gradient(to right, rgba(13,43,85,1) 0%, rgba(13,43,85,1) 38%, rgba(13,43,85,0.4) 55%, rgba(13,43,85,0) 68%), url("hero-home.png") center center / cover no-repeat;
+    background: linear-gradient(to right, rgba(13,43,85,1) 0%, rgba(13,43,85,1) 38%, rgba(13,43,85,0.4) 55%, rgba(13,43,85,0) 68%), url("hero-home.jpg") center center / cover no-repeat;
     padding: 88px 48px 96px;
     position: relative; overflow: hidden;
   }
@@ -671,6 +674,21 @@
   .faq-item{padding:20px 0;border-bottom:1px solid var(--gray-light,#E8E5DE)}
   .faq-item h3{font-size:17px;color:var(--navy,#0D2B55);margin-bottom:8px}
   .faq-item p{font-size:15px;color:var(--gray-text,#555);line-height:1.7}
+  /* nav: keep on one line, collapse to the menu button before it can wrap */
+  .nav-logo { flex-shrink: 0; white-space: nowrap; }
+  .nav-links { flex-wrap: nowrap; }
+  .nav-links li a { white-space: nowrap; }
+  .nav-logo .name { font-size: 36px; }
+  .nav-links li a { font-size: 12.5px; padding: 7px 9px; }
+  .nav-links li a.nav-cta { padding: 8px 14px; margin-left: 6px; }
+  @media (max-width: 1260px) {
+    .nav { padding: 0 24px; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 68px; left: 0; right: 0; background: var(--navy-dark); padding: 12px 0 16px; }
+    .nav-links.open { display: flex; }
+    .nav-links li a { border-radius: 0; padding: 12px 24px; }
+    .nav-links li a.nav-cta { margin: 8px 24px 0; border-radius: 8px; text-align: center; }
+    .nav-toggle { display: flex; }
+  }
 </style>
 </head>
 <body>
@@ -685,8 +703,6 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#programs">Programs</a></li>
     <li><a href="/workforce-readiness.html">Workforce</a></li>
     <li><a href="/career-readiness.html">Career</a></li>
     <li><a href="/entrepreneurship.html">Business</a></li>
@@ -695,7 +711,6 @@
     <li><a href="/community-wellness.html">Community</a></li>
     <li><a href="/digital-banking.html">Banking</a></li>
     <li><a href="#mission">About</a></li>
-    <li><a href="#funding">Funding &amp; Partners</a></li>
     <li><a href="/partner-with-us.html">Partner With Us</a></li>
     <li><a href="#contact" class="nav-cta">Apply / Contact</a></li>
   </ul>
@@ -705,7 +720,7 @@
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-badge">&#9670; Workforce-Aligned Financial Education</div>
-    <h1>Building <em>Economic Mobility</em> Through Financial Capability</h1>
+    <h1>Financial Literacy &amp; Workforce Readiness Programs That Build <em>Economic Mobility</em></h1>
     <p>Medley Innovation delivers workforce-aligned financial capability, career readiness, and entrepreneurship programs — empowering underserved communities nationwide to achieve long-term economic self-sufficiency.</p>
     <div class="hero-btns">
       <a href="#programs" class="btn-primary">Explore Our Programs</a>
@@ -732,7 +747,7 @@
 <!-- ─── PROGRAMS ─── -->
 <section class="section section-white" id="programs">
   <div class="section-inner">
-    <p class="eyebrow">Phase 1 Programs</p>
+    <p class="eyebrow">Our Programs</p>
     <h2 class="section-title">Workforce-Aligned Financial Services</h2>
     <p class="section-sub">Every program is structured to meet workforce development grant requirements — designed for measurable employment outcomes, economic stability, and community impact.</p>
     <div class="programs-grid">
@@ -786,6 +801,35 @@
         <span class="prog-tag">Digital Inclusion</span>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHO WE SERVE ─── -->
+<section class="section section-off" id="who-we-serve">
+  <div class="section-inner">
+    <p class="eyebrow">Who We Serve</p>
+    <h2 class="section-title">Financial Literacy Programs for Your Organization</h2>
+    <p class="section-sub">Whether you run a nonprofit, manage a workforce, or serve the Las Vegas community, start with the page built for you.</p>
+    <div class="programs-grid">
+      <a href="/financial-literacy-for-nonprofits.html" class="prog-card" style="display:block;">
+        <div class="prog-icon" style="background:#F0FBF6;">🤝</div>
+        <h3>Nonprofits &amp; Agencies</h3>
+        <p>Turnkey financial literacy workshops with curriculum, facilitators, and outcome reporting included.</p>
+        <span class="prog-tag">Grant-Aligned</span>
+      </a>
+      <a href="/employee-financial-wellness.html" class="prog-card" style="display:block;">
+        <div class="prog-icon" style="background:#EEF4FF;">🏢</div>
+        <h3>Employers</h3>
+        <p>Employee financial wellness workshops covering budgeting, credit, payroll and benefits literacy, and retirement readiness.</p>
+        <span class="prog-tag">On-Site or Virtual</span>
+      </a>
+      <a href="/financial-literacy-classes-las-vegas.html" class="prog-card" style="display:block;">
+        <div class="prog-icon" style="background:#FFF8EE;">📍</div>
+        <h3>Las Vegas &amp; Southern Nevada</h3>
+        <p>In-person financial literacy classes across the Las Vegas metro area for organizations, workforce centers, and families.</p>
+        <span class="prog-tag">In-Person</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1030,9 +1074,11 @@
           <p style="font-size:15px; font-weight:600; color:#0F6E56; margin-bottom:6px;">Message sent successfully!</p>
           <p style="font-size:13.5px; color:#555;">Thank you — we'll respond within 1–2 business days.</p>
         </div>
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:block;">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display:none;"><input name="bot-field" /></p>
+        <form id="contact-form" name="contact" method="POST" action="https://formsubmit.co/support@medleyinnovation.com" style="display:block;">
+          <input type="hidden" name="_subject" value="New website inquiry - Medley Innovation" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <p style="display:none;"><input name="_honey" tabindex="-1" autocomplete="off" /></p>
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -1087,13 +1133,13 @@
     </div>
     <div class="footer-col">
       <h4>Programs</h4>
-      <a href="#programs">Workforce Readiness</a>
-      <a href="#programs">Career Readiness</a>
-      <a href="#programs">Entrepreneurship</a>
-      <a href="#programs">Youth Programs</a>
-      <a href="#programs">Re-Entry Support</a>
-      <a href="#programs">Community Wellness</a>
-      <a href="#programs">Digital Banking</a>
+      <a href="/workforce-readiness.html">Workforce Readiness</a>
+      <a href="/career-readiness.html">Career Readiness</a>
+      <a href="/entrepreneurship.html">Entrepreneurship</a>
+      <a href="/youth-financial-literacy.html">Youth Programs</a>
+      <a href="/reentry-empowerment.html">Re-Entry Support</a>
+      <a href="/community-wellness.html">Community Wellness</a>
+      <a href="/digital-banking.html">Digital Banking</a>
     </div>
     <div class="footer-col">
       <h4>Partners</h4>
@@ -1102,8 +1148,9 @@
       <a href="#funding">Workforce Agencies</a>
       <a href="#funding">Grant-Makers</a>
       <a href="#funding">Banks &amp; CDFIs</a>
-      <a href="#funding">Employers</a>
-      <a href="#funding">Nonprofits</a>
+      <a href="/employee-financial-wellness.html">Employers</a>
+      <a href="/financial-literacy-for-nonprofits.html">Nonprofits &amp; Agencies</a>
+      <a href="/financial-literacy-classes-las-vegas.html">Las Vegas Classes</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -1153,21 +1200,28 @@
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    const data = new FormData(form);
-
-    fetch('/', {
+    fetch('https://formsubmit.co/ajax/support@medleyinnovation.com', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
     })
-    .then(() => {
+    .then(r => r.json().then(d => ({ ok: r.ok, d })))
+    .then(res => {
+      if (!res.ok || String(res.d.success) !== 'true') throw new Error('not delivered');
       form.style.display = 'none';
       successMsg.style.display = 'block';
     })
     .catch(() => {
       btn.textContent = 'Send Message';
       btn.disabled = false;
-      alert('There was an error sending your message. Please email us directly at support@MedleyInnovation.com');
+      let err = document.getElementById('form-error');
+      if (!err) {
+        err = document.createElement('p');
+        err.id = 'form-error';
+        err.style.cssText = 'margin-top:12px;font-size:13.5px;color:#B3261E;';
+        form.appendChild(err);
+      }
+      err.textContent = 'Your message could not be sent. Please email us directly at support@MedleyInnovation.com.';
     });
   });
 </script>

@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <title>Community Financial Wellness Programs | Medley Innovation</title>
 <meta name="description" content="Community financial wellness programs — financial literacy, homeownership readiness, and fraud prevention for families. Las Vegas & nationwide via Zoom." />
 <meta name="keywords" content="community financial wellness, family financial literacy, homeownership readiness program, predatory lending awareness, fraud prevention education, consumer financial protection, scam awareness seniors, community financial education, housing budget counseling" />
@@ -69,7 +72,7 @@
 
   /* HERO */
   .hero {
-    background: url("hero-community.png") left top / 100% 100% no-repeat;
+    background: url("hero-community.jpg") left top / 100% 100% no-repeat;
     padding: 72px 48px 80px;
     position: relative; overflow: hidden;
   }
@@ -190,6 +193,18 @@
   .faq-item { padding:20px 0; border-bottom:1px solid var(--gray-light); }
   .faq-item h3 { font-size:17px; color:var(--navy); margin-bottom:8px; }
   .faq-item p { font-size:15px; color:var(--gray-text); line-height:1.7; }
+  /* nav: keep on one line, collapse to the menu button before it can wrap */
+  .nav-logo { flex-shrink: 0; white-space: nowrap; }
+  .nav-links { flex-wrap: nowrap; }
+  .nav-links li a { white-space: nowrap; }
+  @media (max-width: 1150px) {
+    .nav { padding: 0 24px; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: var(--navy-dark); padding: 12px 0 16px; }
+    .nav-links.open { display: flex; }
+    .nav-links li a { border-radius: 0; padding: 12px 24px; font-size: 14px; }
+    .nav-links li:last-child a { margin: 8px 24px 0; border-radius: 8px; }
+    .nav-toggle { display: flex; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -229,6 +244,26 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://medleyinnovation.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Community Financial Wellness",
+      "item": "https://medleyinnovation.com/community-wellness.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -242,13 +277,14 @@
   </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="/" >Home</a></li>
-<li><a href="/workforce-readiness.html" >Workforce Readiness</a></li>
-<li><a href="/career-readiness.html" >Career Readiness</a></li>
-<li><a href="/entrepreneurship.html" >Entrepreneurship</a></li>
-<li><a href="/youth-financial-literacy.html" >Youth Programs</a></li>
+<li><a href="/workforce-readiness.html" >Workforce</a></li>
+<li><a href="/career-readiness.html" >Career</a></li>
+<li><a href="/entrepreneurship.html" >Business</a></li>
+<li><a href="/youth-financial-literacy.html" >Youth</a></li>
 <li><a href="/reentry-empowerment.html" >Re-Entry</a></li>
-<li><a href="/community-wellness.html" class="active">Community Wellness</a></li>
-<li><a href="/digital-banking.html" >Digital Banking</a></li>
+<li><a href="/community-wellness.html" class="active">Community</a></li>
+<li><a href="/digital-banking.html" >Banking</a></li>
+<li><a href="/partner-with-us.html">Partner With Us</a></li>
 
   </ul>
 </nav>
@@ -296,7 +332,7 @@
 <section class="section section-off">
   <div class="section-inner">
     <p class="eyebrow">Curriculum</p>
-    <h2 class="section-title">Key Topics Covered</h2>
+    <h2 class="section-title">Community Financial Wellness Workshop Topics</h2>
     <p class="section-sub">Each module is practical, outcomes-focused, and delivered by experienced educators. Programs are customizable to meet the specific needs of your organization or participants.</p>
     <div class="topics-grid">
       
@@ -465,6 +501,13 @@
       <a href="/reentry-empowerment.html">Re-Entry Support</a>
       <a href="/community-wellness.html">Community Wellness</a>
       <a href="/digital-banking.html">Digital Banking</a>
+    </div>
+    <div class="footer-col">
+      <h4>Who We Serve</h4>
+      <a href="/financial-literacy-for-nonprofits.html">Nonprofits &amp; Agencies</a>
+      <a href="/employee-financial-wellness.html">Employers</a>
+      <a href="/financial-literacy-classes-las-vegas.html">Las Vegas Classes</a>
+      <a href="/partner-with-us.html">Partner With Us</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>

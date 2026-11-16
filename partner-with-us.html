@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>Partner With Us | Medley Innovation Financial Empowerment</title>
   <meta name="description" content="Partner with Medley Innovation to deliver WIOA-aligned financial empowerment programs. Serving workforce boards, nonprofits, employers, and government agencies." />
   <meta name="keywords" content="financial empowerment partner, WIOA program provider, workforce board partnership, nonprofit financial literacy partner, financial education provider, grant-funded financial programs, employer financial wellness partner" />
@@ -241,7 +244,41 @@
     .section-title { font-size: 28px; }
     .footer-top { grid-template-columns: 1fr; }
   }
+  /* nav: keep on one line, collapse to the menu button before it can wrap */
+  .nav-logo { flex-shrink: 0; white-space: nowrap; }
+  .nav-links { flex-wrap: nowrap; }
+  .nav-links li a { white-space: nowrap; }
+  .nav-logo .name { font-size: 36px; }
+  .nav-links li a { font-size: 12.5px; padding: 7px 9px; }
+  .nav-links li a.nav-cta { padding: 8px 14px; margin-left: 6px; }
+  @media (max-width: 1150px) {
+    .nav { padding: 0 24px; }
+    .nav-logo .name { font-size: 26px; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: var(--navy); padding: 16px 24px 24px; gap: 4px; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://medleyinnovation.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Partner With Us",
+      "item": "https://medleyinnovation.com/partner-with-us.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -255,8 +292,6 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/index.html#programs">Programs</a></li>
     <li><a href="/workforce-readiness.html">Workforce</a></li>
     <li><a href="/career-readiness.html">Career</a></li>
     <li><a href="/entrepreneurship.html">Business</a></li>
@@ -265,7 +300,6 @@
     <li><a href="/community-wellness.html">Community</a></li>
     <li><a href="/digital-banking.html">Banking</a></li>
     <li><a href="/index.html#mission">About</a></li>
-    <li><a href="/index.html#funding">Funding &amp; Partners</a></li>
     <li><a href="/partner-with-us.html" class="active nav-cta">Partner With Us</a></li>
   </ul>
 </nav>
@@ -425,7 +459,15 @@
       <p style="color:var(--gray-text); font-size:16px;">Tell us about your organization and we'll put together a custom program proposal — typically within 3 business days.</p>
     </div>
     <div class="form-card">
-      <form id="proposal-form" action="https://formspree.io/f/support@MedleyInnovation.com" method="POST">
+      <div id="proposal-success" hidden style="background:#F0FBF6;border:1px solid #1D9E75;border-radius:10px;padding:24px;text-align:center;margin-bottom:16px;">
+        <p style="font-size:15px;font-weight:600;color:#0F6E56;margin-bottom:6px;">Proposal request received.</p>
+        <p style="font-size:13.5px;color:#555;">Thank you. We typically respond within 3 business days.</p>
+      </div>
+      <form id="proposal-form" action="https://formsubmit.co/support@medleyinnovation.com" method="POST">
+        <input type="hidden" name="_subject" value="New proposal request - Medley Innovation" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <p style="display:none;"><input name="_honey" tabindex="-1" autocomplete="off" /></p>
         <div class="form-grid">
           <div class="form-group">
             <label for="org-name">Organization Name *</label>
@@ -573,6 +615,9 @@
       <a href="/index.html#funding">Funding Alignment</a>
       <a href="/index.html#funding">Workforce Agencies</a>
       <a href="/index.html#funding">Banks &amp; CDFIs</a>
+      <a href="/financial-literacy-for-nonprofits.html">Nonprofits &amp; Agencies</a>
+      <a href="/employee-financial-wellness.html">Employers</a>
+      <a href="/financial-literacy-classes-las-vegas.html">Las Vegas Classes</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -592,6 +637,30 @@
   const toggle = document.getElementById('nav-toggle');
   const links = document.getElementById('nav-links');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+<script>
+  (function () {
+    var pf = document.getElementById('proposal-form'), ok = document.getElementById('proposal-success');
+    if (!pf) return;
+    pf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = pf.querySelector('button[type="submit"], input[type="submit"]');
+      var label = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+      fetch('https://formsubmit.co/ajax/support@medleyinnovation.com', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(pf) })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (!res.ok || String(res.d.success) !== 'true') throw new Error('not delivered');
+          pf.hidden = true; ok.hidden = false; ok.scrollIntoView({ block: 'center' });
+        })
+        .catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+          var err = document.getElementById('proposal-error');
+          if (!err) { err = document.createElement('p'); err.id = 'proposal-error'; err.style.cssText = 'margin-top:12px;font-size:13.5px;color:#B3261E;'; pf.appendChild(err); }
+          err.textContent = 'Your request could not be sent. Please email us directly at support@MedleyInnovation.com.';
+        });
+    });
+  })();
 </script>
 <script>var _cy=document.getElementById("copyright-year");if(_cy)_cy.textContent=new Date().getFullYear();</script>
 </body>
